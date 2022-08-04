@@ -111,15 +111,17 @@ function Weather() {
                 );
               })}
             </div>
+
           </>
+          
         )}
       </div>
+            {(error===null && Object.keys(location).length !== 0) && (
+              <div>
+                <Footer />
+              </div>
+            )}
 
-      {Object.keys(location).length !== 0 && (
-        <div>
-          <Footer />
-        </div>
-      )}
     </>
   );
 }
